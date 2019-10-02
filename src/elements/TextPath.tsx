@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 import { requireNativeComponent } from 'react-native';
 import extractTransform from '../lib/extract/extractTransform';
 import extractProps, { propsAndStyles } from '../lib/extract/extractProps';
@@ -77,7 +77,7 @@ export default class TextPath extends Shape<{
           midLine,
         },
       );
-      props.ref = this.refMethod as (instance: Component | null) => void;
+      props.ref = this.refMethod as (instance: React.Component | null) => void;
       return <RNSVGTextPath {...props} />;
     }
 
@@ -87,7 +87,7 @@ export default class TextPath extends Shape<{
         '"',
     );
     return (
-      <TSpan ref={this.refMethod as (instance: Component | null) => void}>
+      <TSpan ref={this.refMethod as (instance: React.Component | null) => void}>
         {children}
       </TSpan>
     );
