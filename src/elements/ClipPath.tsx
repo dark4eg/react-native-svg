@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { requireNativeComponent } from 'react-native';
 import extractClipPath from '../lib/extract/extractClipPath';
 import Shape from './Shape';

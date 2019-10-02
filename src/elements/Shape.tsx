@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import * as React from 'react';
 import SvgTouchableMixin from '../lib/SvgTouchableMixin';
 import { NativeMethodsMixinStatic } from 'react-native';
 import { TransformProps } from '../lib/extract/types';
@@ -8,7 +8,7 @@ const touchKeys = Object.keys(SvgTouchableMixin);
 const touchVals = touchKeys.map(key => SvgTouchableMixin[key]);
 const numTouchKeys = touchKeys.length;
 
-export default class Shape<P> extends Component<P> {
+export default class Shape<P> extends React.Component<P> {
   [x: string]: unknown;
   root: (Shape<P> & NativeMethodsMixinStatic) | null = null;
   constructor(props: P, context: {}) {

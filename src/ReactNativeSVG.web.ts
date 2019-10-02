@@ -1,6 +1,6 @@
 import { createElement } from 'react-native-web';
 import { resolve } from './lib/resolve';
-import { Component } from 'react';
+import * as React from 'react';
 import { NumberProp } from './lib/extract/types';
 
 /**
@@ -82,31 +82,31 @@ function prepare(props) {
   return clean;
 }
 
-export class Circle extends Component {
+export class Circle extends React.Component {
   render() {
     return createElement('circle', prepare(this.props));
   }
 }
 
-export class ClipPath extends Component {
+export class ClipPath extends React.Component {
   render() {
     return createElement('clipPath', prepare(this.props));
   }
 }
 
-export class Defs extends Component {
+export class Defs extends React.Component {
   render() {
     return createElement('defs', prepare(this.props));
   }
 }
 
-export class Ellipse extends Component {
+export class Ellipse extends React.Component {
   render() {
     return createElement('ellipse', prepare(this.props));
   }
 }
 
-export class G extends Component<{
+export class G extends React.Component<{
   x?: NumberProp;
   y?: NumberProp;
   translate?: string;
@@ -122,109 +122,109 @@ export class G extends Component<{
   }
 }
 
-export class Image extends Component {
+export class Image extends React.Component {
   render() {
     return createElement('image', prepare(this.props));
   }
 }
 
-export class Line extends Component {
+export class Line extends React.Component {
   render() {
     return createElement('line', prepare(this.props));
   }
 }
 
-export class LinearGradient extends Component {
+export class LinearGradient extends React.Component {
   render() {
     return createElement('linearGradient', prepare(this.props));
   }
 }
 
-export class Path extends Component {
+export class Path extends React.Component {
   render() {
     return createElement('path', prepare(this.props));
   }
 }
 
-export class Polygon extends Component {
+export class Polygon extends React.Component {
   render() {
     return createElement('polygon', prepare(this.props));
   }
 }
 
-export class Polyline extends Component {
+export class Polyline extends React.Component {
   render() {
     return createElement('polyline', prepare(this.props));
   }
 }
 
-export class RadialGradient extends Component {
+export class RadialGradient extends React.Component {
   render() {
     return createElement('radialGradient', prepare(this.props));
   }
 }
 
-export class Rect extends Component {
+export class Rect extends React.Component {
   render() {
     return createElement('rect', prepare(this.props));
   }
 }
 
-export class Stop extends Component {
+export class Stop extends React.Component {
   render() {
     return createElement('stop', prepare(this.props));
   }
 }
 
-export class Svg extends Component {
+export class Svg extends React.Component {
   render() {
     return createElement('svg', prepare(this.props));
   }
 }
 
-export class Symbol extends Component {
+export class Symbol extends React.Component {
   render() {
     return createElement('symbol', prepare(this.props));
   }
 }
 
-export class Text extends Component {
+export class Text extends React.Component {
   render() {
     return createElement('text', prepare(this.props));
   }
 }
 
-export class TSpan extends Component {
+export class TSpan extends React.Component {
   render() {
     return createElement('tspan', prepare(this.props));
   }
 }
 
-export class TextPath extends Component {
+export class TextPath extends React.Component {
   render() {
     return createElement('textPath', prepare(this.props));
   }
 }
 
-export class Use extends Component {
+export class Use extends React.Component {
   render() {
     return createElement('use', prepare(this.props));
   }
 }
 
-export class Mask extends Component {
+export class Mask extends React.Component {
   render() {
     return createElement('mask', prepare(this.props));
   }
 }
 
-export class Marker extends Component {
+export class Marker extends React.Component {
   render() {
     return createElement('marker', prepare(this.props));
   }
 }
 
-export class Pattern extends Component {
+export class Pattern extends React.Component {
   render() {
     return createElement('pattern', prepare(this.props));
   }
